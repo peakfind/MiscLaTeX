@@ -1,0 +1,136 @@
+\documentclass{article}
+%--------------- Packages ---------------
+\usepackage{xcolor}
+\definecolor{navyblue}{RGB}{0,0,128}
+
+% hyper links
+\usepackage[colorlinks,linkcolor=navyblue,anchorcolor=black,citecolor=black,urlcolor=teal]{hyperref}
+
+% geometry
+\usepackage[top=2.5cm,bottom=2.5cm,left=3cm,right=3cm]{geometry}
+
+\usepackage{lipsum}
+
+\usepackage{amsmath,amssymb}
+\usepackage{amsthm,thmtools}
+
+% style for thm environments
+\declaretheoremstyle[spaceabove=6pt,
+                     spacebelow=6pt,
+                     headfont=\normalfont\bfseries,
+                     notefont=\bfseries,
+                     notebraces={(}{)},
+                     bodyfont=\itshape,
+                     postheadspace=0.5em,
+                     numberwithin=section,
+                     shaded={rulecolor=black,rulewidth=0.5pt,bgcolor={rgb}{1,1,1}}]{thmsty}
+\declaretheoremstyle[spaceabove=6pt,
+                     spacebelow=6pt,
+                     headfont=\normalfont\bfseries,
+                     notefont=\bfseries,
+                     notebraces={(}{)},
+                     bodyfont=\itshape,
+                     numberwithin=section,
+                     postheadspace=0.5em,
+                     shaded={rulecolor=black,rulewidth=0.5pt,bgcolor={rgb}{1,1,1}}]{lemsty}
+\declaretheoremstyle[spaceabove=6pt,
+                     spacebelow=6pt,
+                     headfont=\normalfont\bfseries,
+                     notefont=\bfseries,
+                     notebraces={(}{)},
+                     bodyfont=\itshape,
+                     numberwithin=section,
+                     postheadspace=0.5em,
+                     shaded={rulecolor=black,rulewidth=0.5pt,bgcolor={rgb}{1,1,1}}]{propsty}
+\declaretheoremstyle[spaceabove=6pt,
+                     spacebelow=6pt,
+                     headfont=\normalfont\bfseries,
+                     bodyfont=\normalfont,
+                     postheadspace=0.5em,
+                     numbered=no,
+                     qed=\qedsymbol]{prfsty}
+\declaretheoremstyle[spaceabove=6pt,
+                     spacebelow=6pt,
+                     headfont=\normalfont\bfseries,
+                     notefont=\bfseries,
+                     notebraces={(}{)},
+                     bodyfont=\normalfont,
+                     numberwithin=section,
+                     postheadspace=0.5em,
+                     shaded={rulecolor=black,rulewidth=0.5pt,bgcolor={rgb}{1,1,1}}]{defsty}
+\declaretheoremstyle[spaceabove=6pt,
+                     spacebelow=6pt,
+                     headfont=\normalfont\bfseries,
+                     notefont=\bfseries,
+                     notebraces={(}{)},
+                     bodyfont=\normalfont,
+                     postheadspace=0.5em,
+                     numberwithin=section]{remsty}
+\declaretheoremstyle[spaceabove=6pt,
+                     spacebelow=6pt,
+                     headfont=\normalfont\bfseries,
+                     notefont=\bfseries,
+                     notebraces={(}{)},
+                     bodyfont=\normalfont,
+                     postheadspace=0.5em,
+                     numberwithin=section]{exasty}
+\declaretheoremstyle[spaceabove=6pt,
+                     spacebelow=6pt,
+                     headfont=\normalfont\bfseries,
+                     bodyfont=\normalfont,
+                     numbered=no,
+                     postheadspace=0.5em]{dittosty}
+                     
+% declare thm environment
+\declaretheorem[style=thmsty]{theorem}
+\declaretheorem[style=lemsty]{lemma}
+\declaretheorem[style=propsty]{proposition}
+\declaretheorem[style=prfsty]{Proof}
+\declaretheorem[style=defsty]{definition}
+\declaretheorem[style=remsty]{remark}
+\declaretheorem[style=exasty]{example}
+
+%------------- Title Page ---------------
+\title{Theorem environments With Boxes}
+\author{Jiayi Zhang}
+\date{September 2022}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+In this document, we define several theorem environments by using 
+\texttt{thmtools} package.\footnote{with \texttt{amsthm} backend} Moreover, environments \textbf{Theorem}, \textbf{Lemma}, \textbf{Proposition}, and \textbf{Definition} are equipped with boxes.
+
+\section{Examples}
+
+\begin{theorem}[Test Theorem]
+	\lipsum[1][1-3]
+\end{theorem}
+
+\begin{lemma}[Test Lemma]
+	\lipsum[1][4-5]
+\end{lemma}
+
+\begin{proposition}[Test Proposition]
+	\lipsum[1][6-7]
+\end{proposition}
+
+\begin{definition}[Test Definition]
+	\lipsum[2][1-3]
+\end{definition}
+
+\begin{remark}[Test Remark]
+	\lipsum[3]
+\end{remark}
+
+\begin{example}[Test Example]
+	\lipsum[4]
+\end{example}
+
+\begin{Proof}
+	\lipsum[5]
+\end{Proof}
+
+\end{document}
