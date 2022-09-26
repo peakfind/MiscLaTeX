@@ -5,3 +5,10 @@
 
  ------------------------------------------------------------------------------
  1. freefem_def.tex
+ Use listings to typeset FreeFEM codes.
+
+ 2. thm_box.tex
+ Theorem environments with box.
+
+ 3. thm_default.tex
+ Some theorem environments I would like to use.
