@@ -13,11 +13,58 @@
   sensitive    = true,
   morecomment  = [l][\color{teal}]{//},
   morecomment  = [s][\color{teal}]{/*}{*/},
-  keywords     = [2]{func,real,complex,border,mesh,fespace,imag,P1},
+  keywords     = [2]{% Standard types 
+  	                 int,bool,real,complex,string,
+  	                 % Mesh design
+  	                 border,mesh,mesh3,
+  	                 % Finite element space design
+  	                 fespace,
+  	                 % Marco design
+  	                 marco,
+  	                 % Function design
+  	                 func,
+  	                 % Problem design
+  	                 problem,solve,varf,
+  	                 % array
+  	                 matrix,P1},
   keywordstyle = [2]{\color{brickred}},
-  keywords     = [3]{plot,buildmesh,solve,int2d,int1d,on,dx,dy},
+  keywords     = [3]{%Functions
+                     abs,acos,acosh,adaptmesh,adj,AffineCG,
+                     AffineGMRES,arg,asin,asinh,assert,atan,
+                     atan2,atanh,atoi,atof,BFGS,buildmesh,ceil,
+                     change,checkmovemesh,chi,clock,complexEigenValue,
+                     conj,convect,copysign,cos,cosh,diffnp,diffpos,
+                     dist,dumptable,dx,dxx,dxy,dxz,dy,dyx,dyy,dyz,dz,
+                     dzx,dzy,dzz,EigenValue,emptymesh,erf,erfc,exec,
+                     exit,exp,fdim,floor,fmax,fmin,fmod,imag,int1d,
+                     int2d,int3d,intalledges,intallfaces,interpolate,
+                     invdiff,invdiffnp,invdiffpos,isInf,isNaN,isNormal,j0,
+                     j1,jn,jump,LinearCG,LinearGMRES,lgamma,log,log10,
+                     lrint,lround,ltime,max,min,movemesh,NaN,NLCG,
+                     on,plot,polar,pow,projection,randinit,randint31,
+                     randint32,randreal1,randreal2,randreal3,randres53,
+                     readmesh,readmesh3,rint,round,savemesh,set,sign,
+                     signbit,sin,sinh,sort,splitmesh,sqrt,square,storagetotal,
+                     storageused,strtod,strtol,swap,system,tan,tanh,tgamma,
+                     time,trace,trunc,y0,y1,yn},
   keywordstyle = [3]{\color{blue}},
-  keywords     = [4]{x,y,fill,wait,periodic,label,fixedborder},
+  keywords     = [4]{%Global variables
+  	                 area,ARGV,BoundaryEdge,CG,Cholesky,Crout,
+  	                 edgeOrientation,false,GMRES,hTriangle,
+  	                 include,internalEdge,label,lenEdge,load,
+  	                 LU,N,nTonEdge,nuEdge,nuTriangle,P,pi,
+  	                 region,sparesolver,true,verbosity,version,
+  	                 volume,x,y,z,fill,wait,periodic,fixedborder,
+                   	 %Loops
+                     for,if,else,while,continue,break,try,
+                     catch,
+                     %IO
+                     cout,cin,endl,ifstream,ofstream,append,binary,
+                     seekg,tellg,flush,getline,
+                     %Output format
+                     precision,scientific,fixed,showbase,
+                     noshowbase,showpos,noshowpos,default,
+                     setw},
   keywordstyle = [4]{\bfseries\color{darkgreen}},
  }
 \lstset{
