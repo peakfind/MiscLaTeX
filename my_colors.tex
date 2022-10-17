@@ -1,0 +1,40 @@
+% my_colors.tex - my favourite colors
+\documentclass{article}
+
+\usepackage[bottom=2.5cm,top=2.5cm,right=3cm,left=3cm]{geometry}
+
+% Define some colors for code
+\usepackage{xcolor}
+\definecolor{navyblue}{RGB}{0,0,128}
+\definecolor{brickred}{RGB}{147,39,44}
+\definecolor{darkgreen}{RGB}{0,103,0}
+
+% hyper links
+\usepackage[colorlinks,linkcolor=navyblue,anchorcolor=black,citecolor=black,urlcolor=teal]{hyperref}
+
+\title{My Favouriate Colors}
+\author{Zhang Jiayi}
+\date{\today}
+
+\begin{document}
+	\maketitle
+	
+    This is an document recording my favourite colors. I always use self-defined 
+    color \textcolor{navyblue}{navyblue} for links, black for citation, \textcolor{teal}{teal} 
+    for url, \textcolor{red}{red} for important things, \textcolor{purple}{purple} for emails.
+    
+    \begin{equation}\label{eq:eq1}
+    	x + y = z
+    \end{equation}
+    
+    \Huge
+    Equation (\ref{eq:eq1})
+    
+    \href{https://overleaf.com}{https://overleaf.com}
+    
+    \href{zhangjy97@mail.nankai.edu.cn}{email: zhangjy97@mail.nankai.edu.cn}
+    
+    \textcolor{red}{Some important things!!}
+    
+    \textcolor{purple}{email: zhangjy97@mail.nankai.edu.cn}
+\end{document}
