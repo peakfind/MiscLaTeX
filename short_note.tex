@@ -1,0 +1,46 @@
+\documentclass[a4paper,11pt]{article}
+
+%------------------------------------------------------------------------------
+% PACKAGES
+%------------------------------------------------------------------------------
+% settings for page
+\usepackage[bottom=2.5cm,top=2.5cm,right=3cm,left=3cm]{geometry}
+
+% define colors
+\usepackage{xcolor}
+\definecolor{brickred}{RGB}{147,39,44}
+\definecolor{darkgreen}{RGB}{0,103,0}
+\definecolor{navyblue}{RGB}{0,0,128}
+
+% hyperlinks
+\usepackage[colorlinks,
+linkcolor=navyblue,
+anchorcolor=black,
+citecolor=black,
+urlcolor=teal]{hyperref}
+
+% head
+\usepackage{fancyhdr}
+\thispagestyle{fancy}
+\fancyhf{} % clear all
+\fancyhead[L]{PROB 3.12\ /\ p818}
+\fancyhead[R]{Whose book by Jiayi Zhang}
+\fancyfoot[C]{\thepage}
+
+\pagestyle{plain}
+\fancyfoot[C]{\thepage}
+
+% math
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{amsthm,thmtools}
+\usepackage{enumerate}
+
+% font
+\usepackage{fouriernc}
+% \usepackage{fourier}
+\usepackage{lipsum}
+
+\begin{document}
+\lipsum[1-10]
+
+\end{document}
