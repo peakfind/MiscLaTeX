@@ -12,3 +12,6 @@
 
  3. thm_default.tex
  Some theorem environments I would like to use.
+
+ 4. short_note.tex
+ It can be used for problems, exercises and short notes.
