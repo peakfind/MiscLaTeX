@@ -1,0 +1,81 @@
+% !TeX program = xelatex
+\documentclass{article}
+
+% Set CJK fonts
+% We can also set mono fonts by \setCJKmonofont
+% the name in brace should be checked carefully. It depends on the 
+% installation of your fonts
+\usepackage[fontset=none]{ctex}
+\setCJKmainfont[BoldFont={Source Han Serif SC Bold}]{Source Han Serif SC}
+\setCJKsansfont[BoldFont={Source Han Sans SC Bold}]{Source Han Sans SC}
+
+\usepackage[colorlinks]{hyperref}
+\usepackage{amsmath, amssymb}
+
+% Title
+\title{字体测试: 思源字体}
+\author{张佳毅}
+\date{}
+
+\begin{document}
+\maketitle
+
+本文档用于测试\textbf{思源宋体}以及\textsf{思源黑体}在 \LaTeXe 下的表现. 部分内容参考了 Linkzero Tsang 在\href{https://zhuanlan.zhihu.com/p/526734630?utm\_medium=social&utm\_oi=31733521055744&eqid=d1b
+f141c000036db00000002649474da}{知乎}上的回答.
+
+安装字体时需要选择为所有用户安装. 如果希望能够设置字体的粗细, 需要分开安装不同粗细的字体.
+
+从普通用户最关心的字符集覆盖及写法标准来讨论, 思源黑体可分为以下两大类, 各五个子版本, 各子版本的标识符 (比如 
+\texttt{SC}, \texttt{TC} 等), 会在 GitHub 发布页面的压缩包文件名, 字体名称等场合体现.
+\begin{itemize}
+	\item 语言特定版本 (Language-specific Fonts)
+	      \begin{itemize}
+	      	\item \texttt{SC} - 简体中文
+	      	\item \texttt{TC} - 繁体中文 台湾地区写法标准
+	      	\item \texttt{HC} - 繁体中文 香港地区写法标准
+	      	\item \texttt{J} - 日文
+	      	\item \texttt{K} - 韩文
+	      \end{itemize}
+	\item 地区子集版本 (Region-specific Subset Fonts)
+	       \begin{itemize}
+	      	\item \texttt{CN} - 中国大陆
+	      	\item \texttt{TW} - 台湾地区
+	      	\item \texttt{HK} - 香港地区
+	      	\item \texttt{JP} - 日本
+	      	\item \texttt{KR} - 韩国
+	      \end{itemize}
+\end{itemize}
+
+成功测试\textbf{思源宋体}和\textsf{思源黑体}后, 可以编写一份中文版报告的模板. 第2页中的内容用于与默
+认字体和更莎黑体进行对比.
+
+\newpage
+
+本文档用于测试中文字体效果. 使用Ctex默认配置.
+
+最近知乎上讨论 Sarasa Gothic (更纱黑体) 这款字体的热度比较高, 我也去下载来把玩了一下, 从Github
+上下载了发布为\texttt{ttf}格式的字体后, 发现220MB的压缩包里竟压缩了10GB共480个\texttt{ttf}文件.
+
+如果是没接触过字体设计的朋友, 可能会对着这么一大包文件感到一头雾水, 因此在此罗列这些字体文件的含义, 帮助各位挑选安
+装需要的字体.
+
+
+发现它由6部分组成，分别是
+\begin{itemize}
+	\item 字体家族名称: sarasa. 每个文件名都由它开头, 代表这是更纱黑体家族的字体.
+	\item 字体风格 (Style): \texttt{fixed}. 字体风格决定了西文字符的字形, 分为 \texttt{Gothic}, \texttt{UI}, 
+	      \texttt{Mono}, \texttt{Term}, \texttt{Fixed} 五种.
+	\item 字体衬线: \texttt{slab}. 只有一部分文件有这个部分, 代表其加入了衬线, 数字和字母的笔画末端有短线修饰.
+	\item 汉字字形 (Orthography): \texttt{cl}. 根据不同国家和地区的标准, 字形分为 \texttt{CL}, \texttt{HC}, 
+	      \texttt{J}, \texttt{K}, \texttt{SC}, \texttt{TC} 六种, 例如中国大陆, 中国香港, 日本的``冷''字写法
+	      都不一样, 详见下图.
+	\item 字重: \texttt{regular}. 这一项代表的是字体的粗细, 从细到粗为 \texttt{extralight}, \texttt{light}, 
+	      \texttt{regular}, \texttt{semibold}, \texttt{bold}. 加上 \texttt{italic} 后缀的为意大利体 (斜体). 
+	\item 后缀名: \texttt{ttf}. 最通用的字体格式, 不解释.
+\end{itemize}
+
+举个例子, 我需要用于编程, 同时不喜欢把``>=''连成$\geqslant$，则选择等宽, 不连字的 \texttt{Fixed} 风格. 我不喜欢
+花哨的衬线, 则选择不带 \texttt{slab} 的风格. 我身处中国大陆, 接触的文本都是简体中文, 所以选择 \texttt{SC} 汉字字形.
+
+根据以上需求, 选择所有以``\texttt{sarasa-fixed-sc-}''开头的文件, 安装进系统, 就可以开始使用了.
+\end{document}
